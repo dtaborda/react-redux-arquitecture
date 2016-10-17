@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import image from 'app/assets/bastrap3/bac-header-2.png';
+import Footer from '../footer';
 
 export default class WebLayout extends Component {
   static get propTypes() {
@@ -24,14 +25,9 @@ export default class WebLayout extends Component {
           </div>
         </header>
         <div>
-          <span>nav</span>
-        </div>
-        <div>
           {this.props.children}
         </div>
-        <div>
-          <span>footer</span>
-        </div>
+        <Footer/>
       </div>
     );
   }
