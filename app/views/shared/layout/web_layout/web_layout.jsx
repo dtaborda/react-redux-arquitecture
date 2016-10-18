@@ -1,11 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import image from 'app/assets/bastrap3/bac-header-2.png';
+import Nav from '../nav';
 
 export default class WebLayout extends Component {
+  
   static get propTypes() {
-    return {
-      children: PropTypes.element.isRequired
-    };
+      return {
+          children: PropTypes.element.isRequired,
+          navLinks: PropTypes.array.isRequired,
+          navTitle: PropTypes.string.isRequired
+      };
   }
 
   render() {
@@ -23,9 +27,11 @@ export default class WebLayout extends Component {
             </div>
           </div>
         </header>
-        <div>
-          <span>nav</span>
-        </div>
+
+        <Nav 
+            links={this.props.navLinks}
+            title={this.props.navTitle} />
+
         <div>
           {this.props.children}
         </div>
