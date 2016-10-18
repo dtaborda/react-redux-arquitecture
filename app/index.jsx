@@ -1,8 +1,8 @@
-import React, { Component }    from 'react';
-import ReactDOM                from 'react-dom';
-import { Provider }            from 'react-redux';
-import renderRoutes            from 'app/views/routes';
-import configureStore          from 'app/store';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import renderRoutes from 'app/views/routes';
+import configureStore from 'app/store';
 
 // Apply the base styles for ALL the app
 import 'app/assets/stylesheets/base';
@@ -14,17 +14,17 @@ const store = configureStore();
 
 class Root extends Component {
 
-  constructor(props) {
-    super(props);
-  }
+	constructor(props) {
+		super(props);
+	}
 
-  render() {
-    return (
-      <Provider store={store}>
-        {renderRoutes(store)}
-      </Provider>
-    );
-  }
+	render() {
+		return (
+			<Provider store={store}>
+				{renderRoutes(store)}
+			</Provider>
+		);
+	}
 }
 
 
