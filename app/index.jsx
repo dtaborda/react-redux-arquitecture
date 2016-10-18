@@ -14,17 +14,17 @@ const store = configureStore();
 
 class Root extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+	constructor(props) {
+		super(props);
+	}
 
-    render() {
-        return (
-            <Provider store={store}>
-                {renderRoutes(store)}
-            </Provider>
-        );
-    }
+	render() {
+		return (
+			<Provider store={store}>
+				{renderRoutes(store)}
+			</Provider>
+		);
+	}
 }
 
 
