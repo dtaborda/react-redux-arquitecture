@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import Footer from '../footer';
-import GcbaHeader from '../gcba_header';
+import Footer from 'app/views/shared/layout/footer';
+import Header from 'app/views/shared/layout/gcba_header';
 
 export default class WebLayout extends Component {
 	static get propTypes() {
@@ -12,7 +12,7 @@ export default class WebLayout extends Component {
 	render() {
 		return (
 			<div>
-				<GcbaHeader />
+				<Header />
 				<div>
 					{this.props.children}
 				</div>
