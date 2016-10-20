@@ -1,6 +1,0 @@
-node-web:
-  image: nodesource/trusty:4.2.6
-  ports:
-    - "9898:9898"
-  volumes:
-    - .:/usr/src/app

@@ -33,3 +33,6 @@ build
 
 # EditorConfig
 .editorconfig
+
+# Docker files
+docker-compose.yml
