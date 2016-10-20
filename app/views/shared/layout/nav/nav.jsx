@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 import styles from './nav.scss';
-import ba_btn_image from "app/assets/bastrap3/ba-btn.png";
+import baBtnImage from "app/assets/bastrap3/ba-btn.png";
 import { Link } from 'react-router'
 
 export default class Nav extends Component {
@@ -24,6 +24,14 @@ export default class Nav extends Component {
         title: "GCBA"
     }
 
+    renderLinks() {
+        return (
+          this.props.links.map(function(link,index){
+              return <li key={index}><Link to={link.refTo} activeClassName="active" onlyActiveOnIndex={link.onlyActiveOnIndex}>{link.displayName}</Link></li>;
+          })
+        )
+    }
+
     render() {
         return (
             <nav className="navbar navbar-default" role="navigation">
@@ -34,12 +42,10 @@ export default class Nav extends Component {
                       </div>
                       <div className="collapse navbar-collapse" id="main-nav">
                           <ul className="nav navbar-nav navbar-right">
-                              {this.props.links.map(function(link,index){
-                                  return <li key={index}><Link to={link.refTo} activeClassName="active" onlyActiveOnIndex={link.onlyActiveOnIndex}>{link.displayName}</Link></li>;
-                              })}
+                              {this.renderLinks()}
                               <li className="active-BA">
                                   <a href="#">
-                                      Entrar a <img src={ba_btn_image} className="glyphicon glyphicon-ba" />
+                                      Entrar a <img src={baBtnImage} className="glyphicon glyphicon-ba" />
                                   </a>
                               </li>
                           </ul>
