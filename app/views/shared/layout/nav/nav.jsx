@@ -26,9 +26,9 @@ export default class Nav extends Component {
 
   renderLinks() {
     return (
-    this.props.links.map(function(link,index){
-      return <li key={index}><Link to={link.refTo} activeClassName="active" onlyActiveOnIndex={link.onlyActiveOnIndex}>{link.displayName}</Link></li>;
-    })
+      this.props.links.map(function(link,index){
+        return <li key={index}><Link to={link.refTo} activeClassName="active" onlyActiveOnIndex={link.onlyActiveOnIndex}>{link.displayName}</Link></li>;
+      })
     )
   }
 
