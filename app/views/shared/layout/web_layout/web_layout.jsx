@@ -30,7 +30,8 @@ export default class WebLayout extends Component {
 
         <Nav 
             links={this.props.navLinks}
-            title={this.props.navTitle} />
+            title={this.props.navTitle} 
+        />
 
 				<div>
 					{this.props.children}
