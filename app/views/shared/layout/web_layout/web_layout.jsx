@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import BacHeader from 'app/assets/bastrap3/bac-header-2.png';
-import Footer from '../footer';
-import Nav from '../nav';
+import Footer from 'app/views/shared/layout/footer';
+import Nav from 'app/views/shared/layout/nav';
 
 export default class WebLayout extends Component {
 	static get propTypes() {

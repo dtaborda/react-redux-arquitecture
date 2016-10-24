@@ -1,6 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import classNames from 'classnames';
-import styles from './nav.scss';
 import baBtnImage from "app/assets/bastrap3/ba-btn.png";
 import { Link } from 'react-router'
 
