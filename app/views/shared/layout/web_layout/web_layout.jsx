@@ -1,7 +1,6 @@
 import React, {Component, PropTypes} from 'react';
-import BacHeader from 'app/assets/bastrap3/bac-header-2.png';
 import Footer from 'app/views/shared/layout/footer';
-import Nav from 'app/views/shared/layout/nav';
+import Header from 'app/views/shared/layout/gcba_header';
 
 export default class WebLayout extends Component {
 	static get propTypes() {
@@ -15,23 +14,7 @@ export default class WebLayout extends Component {
 	render() {
 		return (
 			<div>
-				<header className="navbar navbar-primary navbar-top">
-					<div className="container">
-						<div className="row">
-							<div className="col-md-6 col-sm-6">
-								<a className="navbar-brand bac-header" href="#"/>
-							</div>
-							<div className="col-md-6 col-sm-6 text-right oculto">
-								<h5 className="sub-brand"><img src={BacHeader}/></h5>
-							</div>
-						</div>
-					</div>
-				</header>
-
-        <Nav 
-            links={this.props.navLinks}
-            title={this.props.navTitle} 
-        />
+				<Header />
 
 				<div>
 					{this.props.children}
